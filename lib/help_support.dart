@@ -1,4 +1,6 @@
+import 'package:clubapp_clone/grivc_rds.dart';
 import 'package:clubapp_clone/app_details.dart';
+import 'package:clubapp_clone/brw_mny.dart';
 import 'package:clubapp_clone/invstwth_club.dart';
 import 'package:clubapp_clone/main.dart';
 import 'package:clubapp_clone/money_wtdr.dart';
@@ -26,7 +28,8 @@ class HelpSupport extends StatelessWidget {
     borderRadius: BorderRadius.circular(15),
   ),
           child: Column(children: [
-             ListTile(                
+             ListTile(           
+                  contentPadding: const EdgeInsets.all(5),     
                     leading:const Icon(Icons.info,color: Colors.green),
                     title: const Text('Details on 12% Club'),
                     trailing: const Icon(Icons.keyboard_arrow_right,color: Colors.green),
@@ -38,7 +41,7 @@ class HelpSupport extends StatelessWidget {
                 color: Colors.black,
               ),
                ListTile(
-                  
+                      contentPadding: const EdgeInsets.all(5),   
                     leading: const Icon(Icons.account_circle,color: Colors.green),
                     title: const Text('Investing with 12% Club'),
                     trailing: const Icon(Icons.keyboard_arrow_right),
@@ -48,7 +51,7 @@ class HelpSupport extends StatelessWidget {
               ),
                const Divider(  color: Colors.black,),
                ListTile(
-                  
+                      contentPadding: const EdgeInsets.all(5),   
                     leading: const Icon(Icons.monetization_on,color: Colors.green),
                     title: const Text('Money withdrawal from 12% Club'),
                     trailing: const Icon(Icons.keyboard_arrow_right,color: Colors.green),
@@ -58,18 +61,23 @@ class HelpSupport extends StatelessWidget {
               ),
                const Divider(  color: Colors.black,),
                ListTile(
-                  
+                      contentPadding: const EdgeInsets.all(5),   
                     leading: const Icon(Icons.mobile_friendly,color: Colors.green),
                     title: const Text('Borrowing with 12% Club'),
                     trailing: const Icon(Icons.keyboard_arrow_right,color: Colors.green),
-                        onTap: (){},
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>const BrwMny()));
+                        },
               ),
                const Divider(  color: Colors.black,),
                ListTile(
+                      contentPadding: const EdgeInsets.all(5),   
                    leading: const Icon(Icons.help,color: Colors.green),
                     title: const Text('Grievance Redressal'),
                     trailing: const Icon(Icons.keyboard_arrow_right,color: Colors.green),
-                        onTap: (){},
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: ((context) => const GrvRds())));
+                        },
               ),
           ]),
         ),

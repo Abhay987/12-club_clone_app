@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 class InvstClub extends StatelessWidget {
   const InvstClub({ Key? key }) : super(key: key);
 
@@ -131,9 +132,27 @@ class InvstClub extends StatelessWidget {
                child: ListTile(
                   leading: const Icon(Icons.mail,color: Colors.green,),
                   title: const Text('Let us help you! Write to us ',style: TextStyle(fontWeight: FontWeight.bold,fontSize:20,color: Colors.black),),
-                  subtitle: const Text('Submit a request on \n support@twelve.club'),
+                  subtitle: RichText(text: const TextSpan(
+                    children: [
+                      TextSpan(
+                        text: 'Submit a request on \n',
+                      ),
+                      TextSpan(
+                        text: 'support@twelve.club',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                    ]
+                  )),
                   trailing:const Icon(Icons.keyboard_arrow_right,color: Colors.green,),
-                  onTap: (){},
+                  onTap: (){
+                    final Uri params=Uri(
+                                scheme: 'mailto',
+                                path: 'support@twelve.club',
+                                query: 'subject=Issue with 12% Club',
+                              );
+                              String url=params.toString();                                                       
+                               launch(url);  
+                  },
                ),
             ),
           ],

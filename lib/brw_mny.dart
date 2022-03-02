@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-class MnyWtdr extends StatelessWidget {
-  const MnyWtdr({ Key? key }) : super(key: key);
+class BrwMny extends StatelessWidget {
+  const BrwMny({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -9,7 +9,7 @@ class MnyWtdr extends StatelessWidget {
       appBar: AppBar(
         leading: IconButton(icon: const Icon(Icons.arrow_back,color: Colors.black,),onPressed: (){
                 Navigator.pop(context);}),
-                  title: const Text('Money withdrawal from 12% Club',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
+                  title: const Text('Borrowing with 12% Club',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
                   backgroundColor: Colors.white,
                   elevation: 0,
       ),
@@ -31,10 +31,10 @@ class MnyWtdr extends StatelessWidget {
                                       backgroundColor: Colors.transparent,                                                                                                       
                                               tilePadding:  EdgeInsets.all(5),  
                                               childrenPadding:  EdgeInsets.all(10),                  
-                                      title:  Text('Are there any withdrawal charges?',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black),),                                                                    
+                                      title:  Text('How do I get eligible to borrow at the 12% Club?',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black),),                                                                    
                                           children:   [
                                           ListTile(                                          
-                                            title: Text('No! There are no withdrawal charges.'),
+                                            title: Text('Our lending partner - Hindon Mercantile Limited has ites credit policy basis which eligibility checks happen.There can be mutiple reasons for rejection . It may be one of the following:\n-You may not be eligible as per our lending partner.\n-You may have failed to furnish all valid supporting documents.'),
                                             ),
                                               ],                                                
                                         ),
@@ -42,10 +42,10 @@ class MnyWtdr extends StatelessWidget {
                                             backgroundColor: Colors.transparent,   
                                                        tilePadding:  EdgeInsets.all(5),   
                                               childrenPadding:  EdgeInsets.all(10),                           
-                                      title:  Text('Can you withdraw your invested amount before the loan matures?Can the invested amount be withdrawn partially?',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black),),                                                                    
+                                      title:  Text('How is Interest calculated on my loan?',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black),),                                                                    
                                           children:  [
                                           ListTile(                                          
-                                            title: Text('Yes,you can withdraw the amount in partial or full befor maturity.The amount you select will be credited in your bank account according to the term and conditions of ther 12%Club.'),
+                                            title: Text('Interest is calculated at 12% per annuam on your borrowing subject to your creditworthiness. Example - if you borrow ₹ 1,00,000 with 12% Club. Interest cost will be @ 12% interest per year; i.e. 3,000 for 3 months. Interest gets added every day ₹ 33 per day.You can close your loan anytime. There is no repayment penalty.'),
                                               ),
                                               ],
                                         ),
@@ -53,10 +53,10 @@ class MnyWtdr extends StatelessWidget {
                                             backgroundColor: Colors.transparent, 
                                                       tilePadding:  EdgeInsets.all(5),      
                                               childrenPadding:  EdgeInsets.all(10),                      
-                                      title:  Text('What are the parameters for dealing with a withdrawal when there are various lenders wanting to withdraw the invested money at the same time that has already been disbursed?',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black),),                                                                    
+                                      title:  Text('When do I repay back?',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black),),                                                                    
                                           children:  [
                                           ListTile(                                                                                    
-                                            title: Text('Our P2P NBFC Partners have a secondary market and there is no guarantee of liquidation by the 12% Club.A run on the platform does not mean the underlying loans are bad, it just means the lender has to wait longer to get their money back.'),
+                                            title: Text('All loans are for a fixed 3-month duration. At the end of 3 months we pull principal + interest from your registered bank account. You can close your loan anytime. There is no prepayment penalty.'),
                                             ),
                                               ],
                                         ),                                        
@@ -64,24 +64,13 @@ class MnyWtdr extends StatelessWidget {
                                       backgroundColor: Colors.transparent,                                                                                                       
                                               tilePadding:  EdgeInsets.all(5),  
                                               childrenPadding:  EdgeInsets.all(10),                  
-                                      title:  Text('How long does it take for the withdrawal amount to be settled to my bank account?',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black),),                                                                    
+                                      title:  Text('How much money can I borrow?',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black),),                                                                    
                                           children:   [
                                           ListTile(                                         
-                                            title: Text('Withdrawel request are generally processed within 1 business day from the date of request of withdrawel. If you are facing any issue beyond the aforementioned time,please feel free to chat with us or contact our customer support team.'),
+                                            title: Text('The loan offers start from as low as ₹ 10,000 and up to ₹10,00,000. The maximum amount of loan will differ from person to person depending on their creditworthiness.'),
                                             ),
                                               ],
                                                 
-                                        ),
-                                          ExpansionTile(  
-                                            backgroundColor: Colors.transparent,   
-                                                       tilePadding:  EdgeInsets.all(5),   
-                                              childrenPadding:  EdgeInsets.all(10),                           
-                                      title:  Text('Where will money withdrawn from the 12% Club get credited?',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.black),),                                                                    
-                                          children:  [
-                                          ListTile(                                          
-                                            title: Text('Withdrawn money will be credited to your registered bank account.'),
-                                            ),
-                                              ],
                                         ),
                   ],                
                 ),

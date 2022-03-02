@@ -1,8 +1,16 @@
 import 'package:clubapp_clone/main.dart';
+
 import 'package:flutter/material.dart';
-class ProfilePage extends StatelessWidget {
+
+class ProfilePage extends StatefulWidget {
   const ProfilePage({ Key? key }) : super(key: key);
 
+  @override
+  State<ProfilePage> createState() => _ProfilePageState();
+}
+
+class _ProfilePageState extends State<ProfilePage> {
+  bool isPressed=false;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -50,7 +58,7 @@ class ProfilePage extends StatelessWidget {
                           Column(
                                 children: const [
                                    Text('\nName'),
-                                   Text('\nANKIT'),
+                                   Text('\nANKIT',style: TextStyle(fontWeight: FontWeight.bold)),
                                 ],                                
                               ),
                                Column(
@@ -67,13 +75,13 @@ class ProfilePage extends StatelessWidget {
                               Column(
                                 children: const [
                                    Text('\nBank (IFSC: SBINXXXXXXX)'),
-                                   Text('\nSTATE BANK OF INDIA\n'),
+                                   Text('\nSTATE BANK OF INDIA\n',style: TextStyle(fontWeight: FontWeight.bold)),
                                 ],                                
                               ),
                               Column(
                                 children: const[
                                   Text('\nAccount Number'),
-                                  Text('\nXXXX-0006\n'),
+                                  Text('\nXXXX-0006\n',style: TextStyle(fontWeight: FontWeight.bold)),
                                 ],
                               ),
                           ],
@@ -111,12 +119,35 @@ class ProfilePage extends StatelessWidget {
                                onTap: (){},          
                              ),
                               const Divider(),
-                              ListTile(
+                              
+                                      ExpansionTile(  
+                                      backgroundColor: Colors.transparent,                                                                                                       
+                                              tilePadding: const EdgeInsets.all(10), 
+                                               leading: const Icon(Icons.email,color: Color.fromARGB(255, 4, 170, 9)),
+                                                trailing: Icon(isPressed?(Icons.close):(Icons.edit),color: Colors.green,),
+                                                onExpansionChanged: (bool expaned){
+                                                  setState(() {
+                                                    isPressed=expaned;
+                                                  });
+                                                },                                             
+                                              childrenPadding:  const EdgeInsets.all(10),                  
+                                                      title:  const Text('Email ID',style: TextStyle(color: Color.fromARGB(255, 5, 170, 11))),                                                
+                                          children:   const [
+                                           ListTile(                                          
+                                            title: TextField(
+                                              keyboardType: TextInputType.emailAddress,
+                                            ),
+                                                  trailing: Icon(Icons.keyboard_arrow_right_rounded),
+                                            ),                                            
+                                              ],                                                
+                                        ),
+
+                             /* ListTile(
                                 contentPadding: const EdgeInsets.all(10),
                                leading: const Icon(Icons.email,color: Color.fromARGB(255, 4, 170, 9)),
                                title: const Text('Email ID',style: TextStyle(color: Color.fromARGB(255, 5, 170, 11))),                                 
                                    trailing: IconButton(onPressed: (){}, icon: const Icon(Icons.edit),color:const Color.fromARGB(255, 5, 170, 11)),      
-                             ),
+                             ),*/
                              const Divider(),
                               ListTile(
                                 contentPadding: const EdgeInsets.all(10),

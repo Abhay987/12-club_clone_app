@@ -45,7 +45,12 @@ class EarnPage extends StatelessWidget {
                                 padding: const EdgeInsets.all(10),
                                 child: ElevatedButton(                            
                                  child: const Text('Copy Link',style: TextStyle(fontWeight: FontWeight.bold),),
-                                 onPressed: (){},
+                                 onPressed: (){
+                                   showModalBottomSheet(context: context, builder: (context)=>Container(
+                                     color: Colors.green,
+                                     height: 50,
+                                     child: const Text('Link copied successfully',style: TextStyle(color: Colors.white),)));
+                                 },
                                  style: ElevatedButton.styleFrom(
                                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
                                    primary: Colors.green,

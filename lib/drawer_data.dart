@@ -1,6 +1,9 @@
 import 'package:clubapp_clone/help_support.dart';
 import 'package:clubapp_clone/invst_crtft.dart';
+import 'package:clubapp_clone/main.dart';
+import 'package:clubapp_clone/p2p_lending.dart';
 import 'package:clubapp_clone/refer_earn.dart';
+import 'package:clubapp_clone/terms_condition.dart';
 import 'package:flutter/material.dart';
 import 'package:clubapp_clone/profile.dart';
 import 'package:clubapp_clone/statement.dart';
@@ -17,7 +20,7 @@ class DrawerData extends StatelessWidget {
                 elevation: 0,        
                 actions: [
                     IconButton(onPressed: (){
-                      Navigator.pop(context);
+                     Navigator.push(context, MaterialPageRoute(builder: (context) =>const HomeScreen()));
                     }, icon: const Icon(Icons.close,color: Colors.green,)),
                 ],
             ),
@@ -129,21 +132,18 @@ class DrawerData extends StatelessWidget {
                            leading:const  Icon(Icons.info),
                            title:const  Text('Term & Conditions'),
                            trailing:const  Icon(Icons.keyboard_arrow_right),   
-                            onTap: (){},            
-                         ),
-                         const Divider(),
-                          ListTile(
-                           leading:const  Icon(Icons.help),
-                           title: const Text('How to Use'),
-                           trailing:const  Icon(Icons.keyboard_arrow_right),     
-                            onTap: (){},          
-                         ),
+                            onTap: (){
+                              Navigator.push(context, MaterialPageRoute(builder: ((context) => const TrmsCdtn())));
+                            },            
+                         ),                        
                          const Divider(),
                           ListTile(
                            leading:const  Icon(Icons.account_balance_wallet_outlined),
                            title: const Text('Know more about P2P lending'),
                            trailing:const  Icon(Icons.keyboard_arrow_right),             
-                            onTap: (){},  
+                            onTap: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=>const P2pLdg()));
+                            },  
                          ),             
                            ],
                          ),
