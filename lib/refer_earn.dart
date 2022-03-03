@@ -46,10 +46,17 @@ class EarnPage extends StatelessWidget {
                                 child: ElevatedButton(                            
                                  child: const Text('Copy Link',style: TextStyle(fontWeight: FontWeight.bold),),
                                  onPressed: (){
-                                   showModalBottomSheet(context: context, builder: (context)=>Container(
+                                  const snackBar=SnackBar(
+                                    duration: Duration(milliseconds: 200),
+                                     backgroundColor: Colors.green,
+                                    content: Text('Link copied successfully',style: TextStyle(color: Colors.white),));
+                                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                                  /* showModalBottomSheet(
+                                     
+                                     context: context, builder: (context)=>Container(
                                      color: Colors.green,
                                      height: 50,
-                                     child: const Text('Link copied successfully',style: TextStyle(color: Colors.white),)));
+                                     child: const Text('Link copied successfully',style: TextStyle(color: Colors.white),)));      */
                                  },
                                  style: ElevatedButton.styleFrom(
                                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),

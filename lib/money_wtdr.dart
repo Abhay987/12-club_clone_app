@@ -90,6 +90,7 @@ class MnyWtdr extends StatelessWidget {
             const Text('Cannot find what you are looking for?',style: TextStyle(fontWeight: FontWeight.bold),),
             Container(
               margin: const EdgeInsets.only(top: 20,bottom: 20),
+              padding: const EdgeInsets.all(1),
                decoration: BoxDecoration(
                 border: Border.all(color: Colors.black),
                 borderRadius: BorderRadius.circular(15),

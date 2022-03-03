@@ -30,7 +30,7 @@ class DrawerData extends StatelessWidget {
                 child: ListView(                
                   children: [
                     const Text('12%club',style: TextStyle(
-                                 fontSize: 35,
+                                 fontSize: 40,
                                  color: Color.fromARGB(255, 5, 177, 28),fontWeight: FontWeight.bold)),
                    /* DrawerHeader(
                       margin: EdgeInsets.zero,

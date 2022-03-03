@@ -124,6 +124,7 @@ class InvstClub extends StatelessWidget {
             ),
             const Text('Cannot find what you are looking for?',style: TextStyle(fontWeight: FontWeight.bold),),
             Container(
+              padding: const EdgeInsets.all(1),
               margin: const EdgeInsets.only(top: 20,bottom: 20),
                decoration: BoxDecoration(
                 border: Border.all(color: Colors.black),

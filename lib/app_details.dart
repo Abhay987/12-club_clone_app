@@ -92,11 +92,13 @@ import 'package:url_launcher/url_launcher.dart';
             const Text('Cannot find what you are looking for?',style: TextStyle(fontWeight: FontWeight.bold),),
             Container(
               margin: const EdgeInsets.only(top: 20,bottom: 20),
+              padding: const EdgeInsets.all(1),
                decoration: BoxDecoration(
                 border: Border.all(color: Colors.black),
                 borderRadius: BorderRadius.circular(15),
                ),
                child: ListTile(
+                 
                   leading: const Icon(Icons.mail,color: Colors.green,),
                   title: const Text('Let us help you! Write to us ',style: TextStyle(fontWeight: FontWeight.bold,fontSize:20,color: Colors.black),),
                   subtitle: RichText(text: const TextSpan(

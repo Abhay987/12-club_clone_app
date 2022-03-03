@@ -1,3 +1,4 @@
+
 import 'package:clubapp_clone/drawer_data.dart';
 import 'package:flutter/material.dart';
 void main(){
@@ -9,19 +10,36 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor:Colors.white,        
+      appBar: PreferredSize(    
+        preferredSize: const Size.fromHeight(80),  
+        child: AppBar(
+                backgroundColor:Colors.white,  
+        automaticallyImplyLeading: false,
+       // toolbarHeight: 100,        
         elevation: 0,
-        title: const ListTile(
-                  title:  Text('12% Club',style: TextStyle(color: Colors.green,fontWeight: FontWeight.bold),),
-                  subtitle: Text('Invest now and earn up to 12% interest',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30)),
-        ),        
-        actions: [
-          IconButton(onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>const DrawerData()));
-          }, icon: const Icon(Icons.menu,color: Colors.black,)),
-        ],     
-        ),        
+        title:        
+          Column(            
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [  
+              Row(
+                
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                          const Text('12% Club',style: TextStyle(color: Colors.green,fontWeight: FontWeight.bold,fontSize: 20),),
+                            IconButton(onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: ((context) => const DrawerData())));
+                            }, icon: const Icon(Icons.menu,color: Colors.black,)),
+                    ],
+              ),             
+                 const Text('Invest now and earn up to 12% interest',style: TextStyle(color: Colors.black,fontSize: 20),),
+            ],
+          ), 
+        ), 
+              
+      
+        ),              
     );
   }
 }
