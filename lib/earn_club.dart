@@ -1,3 +1,4 @@
+import 'package:clubapp_clone/main.dart';
 import 'package:flutter/material.dart';
 class EarnTvl extends StatelessWidget {
   const EarnTvl({ Key? key }) : super(key: key);
@@ -7,7 +8,7 @@ class EarnTvl extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
          leading: IconButton(icon: const Icon(Icons.arrow_back,color: Colors.black,),onPressed: (){
-                Navigator.pop(context);}),
+                Navigator.push(context, MaterialPageRoute(builder: ((context) => const HomeScreen())));}),
                   title: const Text('Earn @12%*',style: TextStyle(color: Colors.black,fontWeight: FontWeight.bold),),
                   backgroundColor: Colors.white,
                   elevation: 0,      

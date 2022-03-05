@@ -1,4 +1,5 @@
 
+import 'package:clubapp_clone/add_mny.dart';
 import 'package:clubapp_clone/drawer_data.dart';
 import 'package:clubapp_clone/earn_club.dart';
 import 'package:clubapp_clone/help_support.dart';
@@ -98,7 +99,9 @@ class HomeScreen extends StatelessWidget {
                                                    */
                             Container(
                               width: double.infinity,
-                              child: TextButton(onPressed: (){}, child: const Text('ADD MONEY'),                            
+                              child: TextButton(onPressed: (){
+                                Navigator.push(context, MaterialPageRoute(builder: ((context) => const AddMny())));
+                              }, child: const Text('ADD MONEY'),                            
                               style: TextButton.styleFrom(padding: const EdgeInsets.all(10),
                               backgroundColor: Colors.green,
                               primary: Colors.white,
