@@ -4,12 +4,13 @@ import 'package:clubapp_clone/drawer_data.dart';
 import 'package:clubapp_clone/earn_club.dart';
 import 'package:clubapp_clone/help_support.dart';
 import 'package:clubapp_clone/refer_earn.dart';
+import 'package:clubapp_clone/splsh_scrn.dart';
 import 'package:clubapp_clone/terms_condition.dart';
 import 'package:flutter/gestures.dart';
 
 import 'package:flutter/material.dart';
 void main(){
-  runApp(const MaterialApp(home: HomeScreen()));
+  runApp(const MaterialApp(home: SplScr()));
 }
 
 class HomeScreen extends StatelessWidget {
@@ -146,7 +147,9 @@ class HomeScreen extends StatelessWidget {
                                       )),                                 
                                    const Divider(color: Colors.black,indent: 10,
                               endIndent: 10,),                           
-                                  TextButton(onPressed: (){}, child: const Text('INVEST NOW',style: TextStyle(color: Colors.green),))
+                                  TextButton(onPressed: (){
+                                    Navigator.push(context, MaterialPageRoute(builder: ((context) =>const AddMny())));
+                                  }, child: const Text('INVEST NOW',style: TextStyle(color: Colors.green),))
                                ],                         
                              ),                                              
                            ),                     
